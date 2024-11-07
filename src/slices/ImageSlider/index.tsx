@@ -1,8 +1,6 @@
 import ImageSlider from "@/components/ui/ImageSlider";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
 /**
  * Props for `ImageSliderSlice`.

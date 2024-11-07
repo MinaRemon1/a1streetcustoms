@@ -1,6 +1,5 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
 
 /**
  * Props for `Footer`.

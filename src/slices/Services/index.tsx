@@ -1,5 +1,5 @@
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import { Content, asLink } from "@prismicio/client";
+import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import classNames from "classnames";
 import { Danfo } from "next/font/google";
