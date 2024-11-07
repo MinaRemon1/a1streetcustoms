@@ -21,7 +21,7 @@ export const DirectionAwareHover = ({
   const ref = useRef<HTMLDivElement>(null);
 
   const [direction, setDirection] = useState<
-   "left" | string
+    "top" | "bottom" | "left" | "right" | string
   >("left");
 
   const handleMouseEnter = (
@@ -33,13 +33,13 @@ export const DirectionAwareHover = ({
     console.log("direction", direction);
     switch (direction) {
       case 0:
-        setDirection("left");
+        setDirection("top");
         break;
       case 1:
-        setDirection("left");
+        setDirection("right");
         break;
       case 2:
-        setDirection("left");
+        setDirection("bottom");
         break;
       case 3:
         setDirection("left");
@@ -63,61 +63,60 @@ export const DirectionAwareHover = ({
 
   return (
     <motion.div
-  onMouseEnter={handleMouseEnter}
-  ref={ref}
-  className={cn(
-    "md:h-60 w-96 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
-    className
-  )}
->
-  <AnimatePresence mode="wait">
-    <motion.div
-      className="relative h-full w-full"
-      initial="initial"
-      whileHover={direction}
-      exit="exit"
+      onMouseEnter={handleMouseEnter}
+      ref={ref}
+      className={cn(
+        "md:h-96 w-60 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
+        className
+      )}
     >
-      {/* Background overlay with a lower opacity by default and higher on hover */}
-      <motion.div className="absolute inset-0 w-full h-full bg-black/30 group-hover/card:bg-black/60 z-10 transition duration-500" />
-      
-      <motion.div
-        variants={variants}
-        className="h-full w-full relative bg-gray-50 dark:bg-black"
-        transition={{
-          duration: 0.2,
-          ease: "easeOut",
-        }}
-      >
-        <Image
-          alt="image"
-          className={cn(
-            "h-full w-full object-cover scale-[1.15]",
-            imageClassName
-          )}
-          width="1000"
-          height="1000"
-          src={imageUrl}
-          loading="lazy"
-        />
-      </motion.div>
-
-      <motion.div
-        variants={textVariants}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-        }}
-        className={cn(
-          "text-white absolute bottom-4 left-4 z-40",
-          childrenClassName
-        )}
-      >
-        {children}
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          className="relative h-full w-full"
+          initial="initial"
+          whileHover={direction}
+          exit="exit"
+        >
+          {/* Dark overlay with transition on hover */}
+          <motion.div
+            className="absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500"
+            initial={{ opacity: 0.6 }}  // Semi-transparent dark overlay initially
+            whileHover={{ opacity: 1 }} // Darken on hover
+          />
+          <motion.div
+            variants={variants}
+            className="h-full w-full relative bg-gray-50 dark:bg-black"
+            transition={{
+              duration: 0.2,
+              ease: "easeOut",
+            }}
+          >
+            <Image
+              alt="image"
+              className={cn(
+                "h-full w-full object-cover scale-[1.15]",
+                imageClassName
+              )}
+              width="1000"
+              height="1000"
+              src={imageUrl}
+            />
+          </motion.div>
+          {/* Text is always visible */}
+          <motion.div
+            className={cn(
+              "text-white absolute bottom-4 left-4 z-40",
+              childrenClassName
+            )}
+            initial={{ opacity: 1 }} // Ensure opacity stays 1
+            animate={{ opacity: 1 }} // Text remains visible
+            exit={{ opacity: 1 }} // Keep text visible on exit
+          >
+            {children}
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
     </motion.div>
-  </AnimatePresence>
-</motion.div>
-
   );
 };
 
@@ -141,30 +140,5 @@ const variants = {
   },
   right: {
     x: -20,
-  },
-};
-
-const textVariants = {
-  initial: {
-    y: 0,
-    x: 0,
-    opacity: 1,
-  },
-  exit: {
-    y: 0,
-    x: 0,
-    opacity: 1,
-  },
-  top: {
-    y: -20,
-  },
-  bottom: {
-    y: 2,
-  },
-  left: {
-    x: -2,
-  },
-  right: {
-    x: 20,
   },
 };
