@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useRef } from "react";
 import Header from "@/components/global/Header";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Content } from "@prismicio/client";
@@ -18,8 +21,18 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+  // Specify the type for the videoRef
+  const videoRef = useRef<HTMLVideoElement>(null);
   const flipWords = slice.primary.flip_words;
   const words = flipWords.map(item => item.word);
+
+  useEffect(() => {
+    // Check if videoRef.current exists before calling load()
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, []);
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -30,14 +43,18 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <Header />
 
       {/* Video Background */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/video.mp4" // Replace with your video file path
-        autoPlay
-        loop
-        muted
-        playsInline
-      ></video>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          ref={videoRef}
+          className="object-cover w-full h-full"
+          src="/video.mp4" // Replace with your video file path
+          autoPlay
+          loop
+          muted
+          playsInline
+          // poster="/fallback-image.jpg" // Fallback image to show before video loads
+        ></video>
+      </div>
 
       {/* Dark Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
@@ -48,9 +65,8 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           {slice.primary.usp}
         </h1>
         <div className="text-[#EDEDED] font-extralight text-lg md:text-xl lg:text-2xl mt-4">
-          {slice.primary.tagline}<FlipWords words={words} />
+          {slice.primary.tagline} <FlipWords words={words} />
         </div>
-        {/* <Link href={asLink(slice.primary.button_link) ?? '#'}> */}
         <Link href="#">
           <button className="px-10 py-4 mt-14 rounded-lg bg-red-800 text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
             {slice.primary.button_text}
