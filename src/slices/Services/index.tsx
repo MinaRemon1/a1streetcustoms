@@ -35,7 +35,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
               {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl w-full"> */}
                 <div>
                   {item.image?.url ? (
-                    <DirectionAwareHover imageUrl={item.image.url} className="w-full max-w-sm min-h-96">
+                    <DirectionAwareHover imageUrl={item.image.url} className="w-full h-96">
                       <p className="font-bold text-3xl">{item.title}</p>
                     </DirectionAwareHover>
                   ) : (
