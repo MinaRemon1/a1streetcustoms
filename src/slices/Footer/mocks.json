@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"number": {
+				"__TYPE__": "FieldContent",
+				"value": "physical",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "shall",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum in in pariatur velit proident enim irure laborum voluptate. Eiusmod incididunt pariatur veniam nostrud nostrud ea aliquip."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

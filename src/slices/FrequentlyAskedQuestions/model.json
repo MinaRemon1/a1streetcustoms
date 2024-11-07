@@ -1,0 +1,44 @@
+{
+  "id": "frequently_asked_questions",
+  "type": "SharedSlice",
+  "name": "FrequentlyAskedQuestions",
+  "description": "FrequentlyAskedQuestions",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "faq": {
+          "type": "Group",
+          "config": {
+            "label": "FAQ",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "Text",
+                "config": {
+                  "label": "Question",
+                  "placeholder": ""
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
