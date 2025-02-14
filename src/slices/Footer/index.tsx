@@ -43,7 +43,8 @@ const Footer = ({ slice }: FooterProps): JSX.Element => {
         <div className="flex flex-col gap-2">
           <h3 className="text-white text-lg font-semibold">Address</h3>
           <div className="text-sm leading-relaxed">
-            <PrismicRichText field={slice.primary.address} />
+            {/* <PrismicRichText field={slice.primary.address} /> */}
+            10 Yemen Road, Yemen
           </div>
         </div>
 
