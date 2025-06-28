@@ -91,7 +91,7 @@ const Header = () => {
                         <ul>
                             <li onClick={() => setMenuOpen(false)} className='py-4 hover:text-zinc-300 text-white'><Link href='/'>Home</Link></li>
                             <li onClick={() => setMenuOpen(false)} className='py-4 hover:text-zinc-300 text-white'><Link href='#about'>About</Link></li>
-                            <li onClick={() => setMenuOpen(false)} className='py-4 hover:text-zinc-300 text-white'><Link href='#'>Contact</Link></li>
+                            <li onClick={() => setMenuOpen(false)} className='py-4 hover:text-zinc-300 text-white'><Link href='#contact'>Contact</Link></li>
                         </ul>
                     </div>
                     <br/><br/>
