@@ -140,7 +140,7 @@ const WhyChooseUs = ({ slice }: WhyChooseUsProps): JSX.Element => {
         speed="slow"
       />
       <Link href="https://www.yelp.com/biz/a1streetcustoms-long-beach?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)">
-        <button className="px-10 py-4 mt-14 justify-center content-center mx-auto rounded-lg bg-red-800 text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
+        <button className="px-10 py-4 mt-14 justify-center content-center mx-auto rounded-lg bg-[#c0a562] text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-[#9e8851]">
           Give us a review!
         </button>
       </Link>

@@ -48,7 +48,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, interval = 3000 }) =>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-40">
         <h2 className={classNames(danfo.className, "text-4xl font-bold mb-4")}>Get Your Car Done Today!</h2>
         <Link href="#">
-          <button className="px-10 py-4 rounded-lg bg-red-800 text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
+          <button className="px-10 py-4 rounded-lg bg-[#c0a562] text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-[#9e8851]">
             Get A Quote
           </button>
         </Link>

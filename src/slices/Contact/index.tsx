@@ -76,7 +76,7 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
         <Button
           type="submit"
           variant="default"
-          className="w-full md:text-lg py-4 rounded-md font-semibold bg-red-700 hover:bg-red-800 transition"
+          className="w-full md:text-lg py-4 rounded-md font-semibold bg-[#c0a562] hover:bg-[#9e8851] transition"
         >
           Submit
         </Button>

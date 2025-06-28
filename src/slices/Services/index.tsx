@@ -50,7 +50,7 @@ const Services = ({ slice }: ServicesProps): JSX.Element => {
         )}
         </div>
         <Link href="#">
-          <button className="px-10 py-4 mt-14 rounded-lg bg-red-800 text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
+          <button className="px-10 py-4 mt-14 rounded-lg bg-[#c0a562] text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-[#9e8851]">
             Get A Quote
           </button>
         </Link>

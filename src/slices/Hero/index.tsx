@@ -53,7 +53,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         </div>
         {/* <Link href={asLink(slice.primary.button_link) ?? '#'}> */}
         <Link href="#">
-          <button className="px-10 py-4 mt-14 rounded-lg bg-red-800 text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
+          <button className="px-10 py-4 mt-14 rounded-lg bg-[#c0a562] text-white text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-[#9e8851]">
             {slice.primary.button_text}
           </button>
         </Link>

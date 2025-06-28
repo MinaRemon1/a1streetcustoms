@@ -37,7 +37,7 @@ const About = ({ slice }: AboutProps): JSX.Element => {
               <PrismicRichText field={slice.primary.text} />
             </div>
             <Link href="#">
-              <button className="px-6 py-3 mt-14 rounded-lg bg-red-800 text-[#EDEDED] text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-red-900">
+              <button className="px-6 py-3 mt-14 rounded-lg bg-[#c0a562] text-[#EDEDED] text-md hover:-translate-y-1 transform transition duration-200 hover:shadow-md hover:bg-[#9e8851]">
                 Get A Quote
               </button>
             </Link>
