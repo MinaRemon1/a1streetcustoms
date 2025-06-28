@@ -51,7 +51,7 @@ const Header = () => {
                             {/* <li className={styles.navLinks}><Link href='#services'>Services</Link></li> */}
                             <li className={styles.navLinks}><Link href='#about'>About</Link></li>
                             {/* <li className={styles.navLinks}><Link href='#faq'>FAQs</Link></li> */}
-                            <li className={styles.navLinks}><Link href='#'>Contact</Link></li>
+                            <li className={styles.navLinks}><Link href='#contact'>Contact</Link></li>
                             <li className={styles.navLinks}>
                                 <a href='https://www.instagram.com/a1streetcustoms?igsh=MXV6bWhtM3VldHhrYQ=='>
                                     <svg

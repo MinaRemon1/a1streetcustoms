@@ -52,7 +52,7 @@ const Footer = ({ slice }: FooterProps): JSX.Element => {
           <h3 className="text-white text-lg font-semibold">Contact</h3>
           {/* <p className="text-sm">{slice.primary.email}</p>
           <p className="text-sm">{slice.primary.number}</p> */}
-          <p className="text-sm">girgis@a1streetcustoms.com</p>
+          <p className="text-sm">guirgis@a1streetcustoms.com</p>
           <p className="text-sm">(562) 445-5291</p>
         </div>
       </div>
