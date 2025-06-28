@@ -50,10 +50,10 @@ const Footer = ({ slice }: FooterProps): JSX.Element => {
         {/* Contact Section */}
         <div className="flex flex-col gap-2">
           <h3 className="text-white text-lg font-semibold">Contact</h3>
-          {/* <p className="text-sm">{slice.primary.email}</p>
-          <p className="text-sm">{slice.primary.number}</p> */}
-          <p className="text-sm">guirgis@a1streetcustoms.com</p>
-          <p className="text-sm">(562) 445-5291</p>
+          <p className="text-sm">{slice.primary.email}</p>
+          <p className="text-sm">{slice.primary.number}</p>
+          {/* <p className="text-sm">guirgis@a1streetcustoms.com</p>
+          <p className="text-sm">(562) 445-5291</p> */}
         </div>
       </div>
     </footer>
