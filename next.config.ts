@@ -17,6 +17,11 @@ const nextConfig = {
               hostname: 'images.prismic.io',
               pathname: '**',
             },
+            {
+              protocol: 'https',
+              hostname: 's3-media0.fl.yelpcdn.com',
+              pathname: '**',
+            },
         ],
   },
 };
