@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "A1 Street Customs",
-  description: "",
+  description: "The best shop for wraps, PPF, and details!",
 };
 
 export default function RootLayout({
