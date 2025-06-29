@@ -64,6 +64,16 @@
           "thumbnails": []
         },
         "type": "Image"
+      },
+      "meta_domain": {
+        "type": "Link",
+        "config": {
+          "label": "Meta Domain",
+          "placeholder": "meta domain",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
       }
     }
   }

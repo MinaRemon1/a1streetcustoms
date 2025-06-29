@@ -44,7 +44,7 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
         method="POST"
         className="max-w-xl mx-auto mt-10 space-y-6"
       >
-        <input type="hidden" name="_cc" value="mina@etherealai.tech" />
+        <input type="hidden" name="_cc" value="guirgis@a1streetcustoms.com" />
         <input type="hidden" name="_captcha" value="false" />
 
         <Input

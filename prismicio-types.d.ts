@@ -59,6 +59,17 @@ interface HomepageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Domain field in *Homepage*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: meta domain
+   * - **API ID Path**: homepage.meta_domain
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  meta_domain: prismic.LinkField;
 }
 
 /**
