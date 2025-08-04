@@ -1,11 +1,11 @@
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import classNames from "classnames";
-import { Danfo } from "next/font/google";
+// import classNames from "classnames";
+// import { Danfo } from "next/font/google";
 import Link from "next/link";
 
-const danfo = Danfo({ subsets: ["latin"] });
+// const danfo = Danfo({ subsets: ["latin"] });
 
 const testimonials = [
   {
