@@ -105,7 +105,7 @@ const WhyChooseUs = ({ slice }: WhyChooseUsProps): JSX.Element => {
             >
               <path d="M9 12h6M12 5l7 7-7 7" />
             </svg> */}
-            <h3 className={classNames(danfo.className, "text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_2}</h3>
+            <h3 className={("text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_2}</h3>
             <p className="text-[#EDEDED] font-extralight">
             {slice.primary.text_2}
             </p>
