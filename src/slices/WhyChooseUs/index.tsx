@@ -86,7 +86,7 @@ const WhyChooseUs = ({ slice }: WhyChooseUsProps): JSX.Element => {
             >
               <path d="M12 2L2 7h3v9h2V9h4v7h2V7h3L12 2z" />
             </svg> */}
-            <h3 className={classNames(danfo.className, "text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_1}</h3>
+            <h3 className={("text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_1}</h3>
             <p className="text-[#EDEDED] font-extralight">
             {slice.primary.text_1}
             </p>
@@ -124,7 +124,7 @@ const WhyChooseUs = ({ slice }: WhyChooseUsProps): JSX.Element => {
             >
               <path d="M19 19L5 5M5 19L19 5" />
             </svg> */}
-            <h3 className={classNames(danfo.className, "text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_3}</h3>
+            <h3 className={("text-2xl font-semibold mb-2 text-[#EDEDED]")}>{slice.primary.title_3}</h3>
             <p className="text-[#EDEDED] font-extralight">
               {slice.primary.text_3}
             </p>
@@ -132,7 +132,7 @@ const WhyChooseUs = ({ slice }: WhyChooseUsProps): JSX.Element => {
         </div>
       </div>
     </section>
-    <h1 className={classNames(danfo.className ,"text-[#EDEDED] text-3xl md:text-4xl font-bold text-center")}></h1>
+    <h1 className={("text-[#EDEDED] text-3xl md:text-4xl font-bold text-center")}></h1>
       <div className="h-[37rem] rounded-md flex flex-col antialiased bg-[#171717] dark:bg-black dark:bg-grid-blue/[0.05] items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={testimonials}
